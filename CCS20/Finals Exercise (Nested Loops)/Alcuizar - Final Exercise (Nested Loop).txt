@@ -1,0 +1,103 @@
+package exercise2A;
+
+import java.util.Scanner;
+
+public class Exercise2A {
+
+	public static void main(String[] args) {
+
+		int i, j, ctr, ctr2;
+		
+		System.out.println("Enter a starting value");
+		Scanner in = new Scanner(System.in);
+			i = in.nextInt();
+			
+		System.out.println("Enter and ending value");	
+		
+		do {
+			Scanner in2 = new Scanner(System.in);
+				j = in2.nextInt();		
+			if (j < i) {
+				System.out.println("Invalid. Please enter a number higher than the starting value.");
+			}
+			else {
+				System.out.println("Result:");
+			}
+		} while (j < i);
+		
+		for (ctr = i; ctr <= j; ctr++) {
+			for (ctr2 = 1; ctr2 <= ctr; ctr2++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+package exercise2B;
+
+import java.util.Scanner;
+
+public class Exercise2B {
+
+	public static void main(String[] args) {
+
+		int i, i2, ctr, ctr2;
+		
+		System.out.println("Enter a starting value.");
+		Scanner in = new Scanner(System.in);
+			i = in.nextInt();
+			
+		System.out.println("Enter an ending value.");	
+		
+		do {
+			Scanner in2 = new Scanner(System.in);
+			i2 = in2.nextInt();		
+			if (i2 > i) {
+				System.out.println("Invalid. Please enter a number lower than the starting value.");
+			}
+			else {
+				System.out.println("Result:");
+			}
+		} while (i2 > i);
+		
+		for (ctr = i; ctr >= i2; ctr--) {
+			for (ctr2 = 1; ctr2 <= (-1 * ctr + i); ctr2++) {
+				System.out.print(".");
+			}
+			System.out.print(ctr);
+			for (ctr2 = 1; ctr2 <= (ctr - i2); ctr2++) {
+				System.out.print(".");
+			}
+			System.out.println();
+		}
+	}
+}
+
+package exercise2C;
+
+import java.util.Scanner;
+
+public class Exercise2C {
+
+	public static void main(String[] args) {
+
+		int i, j, ctr = 0, ctr2 = 0;
+		
+		System.out.println("Enter a number");
+		Scanner in = new Scanner(System.in);
+			i = in.nextInt();
+			
+		System.out.println("Enter another number");	
+		Scanner in2 = new Scanner(System.in);
+			j = in2.nextInt();		
+			
+		for (ctr = 1; ctr <= j; ctr++) {
+			for (ctr2 = 1; ctr2 <= i; ctr2++) {
+				System.out.print((ctr * ctr2) + " ");
+			}
+			System.out.println();
+		}
+	}
+}
+
