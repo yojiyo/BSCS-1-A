@@ -1,0 +1,61 @@
+package finalexampart2;
+import java.util.Scanner;
+public class Problem1 {
+
+	public static void main(String[] args) {
+
+		String top = "Top";
+		String bottom = "Bottom";
+		String right = "Right";
+		String left = "Left";
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Input a number.");
+			int n = in.nextInt();
+		
+		Scanner in2 = new Scanner(System.in);			
+		System.out.println("Select starting point: Top or Bottom");
+			String option1 = in2.next();		
+		
+		Scanner in3 = new Scanner(System.in);
+		System.out.println("Select ending point: Right or Left");
+			String option2 = in3.next();	
+		
+		if (option1.equalsIgnoreCase(top)) {
+			for (int i = 1; i <= n; i++) {
+				if (option2.equalsIgnoreCase(right)) {
+					for (int j = 1; j <= i; j++) {
+						System.out.print("*  ");
+					}	
+				}
+				else if (option2.equalsIgnoreCase(left)) {
+					for (int j = 1; j <= (-1 * i + n); j++) {
+						System.out.print("   ");
+					}
+					for (int k = 1; k <= i; k++) {
+						System.out.print("*  ");
+					}
+				}
+			System.out.println();	
+			}
+		}
+		if (option1.equalsIgnoreCase(bottom)) {
+			for (int i = n; i >= 1; i--) {
+				if (option2.equalsIgnoreCase(right)) {
+					for (int j = i; j >= 1; j--) {
+						System.out.print("*  ");
+					}	
+				}
+				else if (option2.equalsIgnoreCase(left)) {
+					for (int j = 1; j <= (-1 * i + n); j++) {
+						System.out.print("   ");
+					}
+					for (int k = 1; k <= i; k++) {
+						System.out.print("*  ");
+					}
+				}
+			System.out.println();	
+			}
+		}
+	}
+}
